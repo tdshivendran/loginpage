@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+        .forms {
+            width: 100%;
+            padding: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1>Welcome to webserver! Happy Surfing..</h1>
+        <button onclick="flogin()">Sign IN</button>
+        <button onclick="fsignup()">Sign UP</button>
+    </div>
+
+<form name="login" action="/login" method="POST">
+    <div id="loginform" align="center" class="forms">
+        <table>
+            <tr>
+                <td><label>Username</label></td>
+                <td><input type="text" name="un" required></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" name="pswrd" required></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<form name="signup" action="/signup" method="POST">
+    <div id="SignupForm" align="center" class="forms">
+        <table>
+            <tr>
+                <td><label><b>Username</b></label></td>
+                <td><input type="text" name="un1"></td>
+            </tr>
+            <tr>
+                <td><label><b>Password</b></label></td>
+                <td><input type="password" name="pswrd1"></td>
+            </tr>
+            <tr>
+                <td><label><b>Repeat Password</b></label></td>
+                <td><input type="password" name="pswrdrep"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="SignUP">
+            </tr>
+        </table>
+    </div>
+</form>
+
+
+    <div align="center" class="forms">
+        <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+    </div>
+
+    <script>
+        var x=document.getElementById("loginform");
+        var y=document.getElementById("SignupForm");
+        x.style.display="none";
+        y.style.display="none";
+        function flogin() {
+            if (y.style.display !="none"){
+                y.style.display = "none";
+            }
+            if (x.style.display === "none"){
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function fsignup() {
+            if (x.style.display !="none"){
+                x.style.display = "none";
+            }
+            if (y.style.display === "none"){
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
